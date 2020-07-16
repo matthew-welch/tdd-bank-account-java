@@ -34,4 +34,15 @@ public class AccountTest {
         account.withdraw(2);
         assertThat(account.getBalance()).isEqualTo(8);
     }
+
+    @Test
+    public void moneyCanBeTransferredBetweenAccounts() {
+        Account source = new Account();
+        source.deposit(6);
+        Account destination = new Account();
+
+        source.transfer(5, destination);
+        assertThat(source.getBalance()).isEqualTo(1);
+        assertThat(destination.getBalance()).isEqualTo(5);
+    }
 }

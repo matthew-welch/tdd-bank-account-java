@@ -15,4 +15,10 @@ public class Account {
     public void withdraw(int amount) {
         balance -= amount;
     }
+
+    public void transfer(int amount, Account destination) {
+        destination.deposit(amount);
+
+        balance -= amount;
+    }
 }
