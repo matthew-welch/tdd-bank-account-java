@@ -50,4 +50,9 @@ public class AccountTest {
     public void exceptionIsThrownWhenNotEnoughFundsAvailableToTransfer() {
         org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () -> account.transfer(100, new Account()));
     }
+
+    @Test
+    public void exceptionIsThrownWhenNotEnoughFundsAvailableToWithdraw() {
+        org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () -> account.withdraw(100));
+    }
 }
