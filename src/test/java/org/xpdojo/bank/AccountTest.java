@@ -22,13 +22,13 @@ public class AccountTest {
     }
 
     @Test
-    public void depositAnAmountToIncreaseTheBalance() {
+    public void depositingAnAmountWillIncreaseTheBalance() {
         account.deposit(10);
         assertThat(account.getBalance()).isEqualTo(10);
     }
 
     @Test
-    public void withdrawAnAmountToDecreaseTheBalance() {
+    public void withdrawingAnAmountWillDecreaseTheBalance() {
         account.deposit(10);
         assertThat(account.getBalance()).isEqualTo(10);
         account.withdraw(2);
