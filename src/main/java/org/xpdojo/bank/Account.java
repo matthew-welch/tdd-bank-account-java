@@ -18,8 +18,8 @@ public class Account {
     }
 
     public void transfer(int amount, Account destination) {
-        destination.deposit(amount);
         checkAvailableFunds(amount);
+        destination.deposit(amount);
         balance -= amount;
     }
 
