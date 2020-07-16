@@ -55,4 +55,10 @@ public class AccountTest {
     public void exceptionIsThrownWhenNotEnoughFundsAvailableToWithdraw() {
         org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () -> account.withdraw(100));
     }
+
+    @Test
+    public void balanceCanBePrinted() {
+        String balance = account.printBalance();
+        assertThat(balance).isEqualTo("Available funds: 0");
+    }
 }

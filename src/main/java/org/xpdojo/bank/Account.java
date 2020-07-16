@@ -28,4 +28,8 @@ public class Account {
             throw new RuntimeException("not enough money");
         }
     }
+
+    public String printBalance() {
+        return "Available funds: " + balance;
+    }
 }
