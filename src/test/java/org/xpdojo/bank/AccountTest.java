@@ -45,4 +45,9 @@ public class AccountTest {
         assertThat(source.getBalance()).isEqualTo(1);
         assertThat(destination.getBalance()).isEqualTo(5);
     }
+
+    @Test
+    public void exceptionIsThrownWhenNotEnoughFundsAvailableToTransfer() {
+        org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () -> account.transfer(100, new Account()));
+    }
 }

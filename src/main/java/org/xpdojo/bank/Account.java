@@ -18,7 +18,13 @@ public class Account {
 
     public void transfer(int amount, Account destination) {
         destination.deposit(amount);
-
+        checkAvailableFunds(amount);
         balance -= amount;
+    }
+
+    private void checkAvailableFunds(int amount) {
+        if (balance < amount) {
+            throw new RuntimeException("not enough money");
+        }
     }
 }
