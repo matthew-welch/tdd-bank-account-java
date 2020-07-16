@@ -22,8 +22,8 @@ public class AccountTest {
     }
 
     @Test
-    @Disabled
     public void depositAnAmountToIncreaseTheBalance() {
+        account.deposit(10);
         assertThat(account.getBalance()).isEqualTo(10);
     }
 }
